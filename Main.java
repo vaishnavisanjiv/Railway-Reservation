@@ -32,18 +32,18 @@ class Train {
     public void bookSeats(int numSeats) {
         if (numSeats <= availableSeats) {
             availableSeats -= numSeats;
-            System.out.println(numSeats + " seat(s) booked successfully on train " + trainNumber);
+            System.out.println(numSeats + " seat(s) booked successfully on train " + trainNumber + "\n");
         } else {
-            System.out.println("Insufficient seats available on train " + trainNumber);
+            System.out.println("Insufficient seats available on train " + trainNumber + "\n");
         }
     }
 
     public void cancelSeats(int numSeats) {
         if (numSeats <= (totalSeats - availableSeats)) {
             availableSeats += numSeats;
-            System.out.println(numSeats + " seat(s) canceled successfully on train " + trainNumber);
+            System.out.println(numSeats + " seat(s) canceled successfully on train " + trainNumber + "\n");
         } else {
-            System.out.println("Cannot cancel more seats than booked.");
+            System.out.println("Cannot cancel more seats than booked." + "\n");
         }
     }
 
@@ -84,7 +84,7 @@ class RailwayReservationSystem {
         if (train != null) {
             train.bookSeats(numSeats);
         } else {
-            System.out.println("Train not found.");
+            System.out.println("Train not found." + "\n");
         }
     }
 
@@ -93,7 +93,7 @@ class RailwayReservationSystem {
         if (train != null) {
             train.cancelSeats(numSeats);
         } else {
-            System.out.println("Train not found.");
+            System.out.println("Train not found." + "\n");
         }
     }
 
